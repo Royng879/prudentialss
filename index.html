@@ -10,6 +10,8 @@
         .primary-gradient { background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%); }
         .hover-scale { transition: transform 0.3s ease; }
         .hover-scale:hover { transform: scale(1.02); }
+        .flex-card { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s; }
+        .flex-card:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-5px); }
         html { scroll-behavior: smooth; }
     </style>
 </head>
@@ -53,12 +55,51 @@
 
     <section class="py-20 primary-gradient text-white">
         <div class="max-w-6xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-4xl font-bold mb-8 italic text-yellow-400 underline">FLEX 的独特魅力</h2>
-                    <img src="flex.jpg" alt="FLEX 定义" class="rounded-3xl shadow-2xl mb-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold italic text-yellow-400 underline">FLEX 的独特魅力</h2>
+                <p class="mt-4 text-white/80 text-lg font-light">四大核心优势，为您重塑财富路径</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div class="hover-scale">
+                    <img src="flex.jpg" alt="FLEX 定义" class="rounded-3xl shadow-2xl">
                 </div>
-                <div class="bg-white/10 p-2 rounded-3xl backdrop-blur-sm">
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="flex-card p-6 rounded-2xl flex items-start gap-4">
+                        <div class="bg-yellow-400 text-red-900 w-12 h-12 rounded-full flex items-center justify-center shrink-0 font-bold text-2xl">F</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">FlexIncome - 灵活收入</h3>
+                            <p class="text-white/80">就像每年领到“年度奖金”，可领出使用或存入滚利，领到100岁。</p>
+                        </div>
+                    </div>
+                    <div class="flex-card p-6 rounded-2xl flex items-start gap-4">
+                        <div class="bg-yellow-400 text-red-900 w-12 h-12 rounded-full flex items-center justify-center shrink-0 font-bold text-2xl">L</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">Legacy - 财富传承</h3>
+                            <p class="text-white/80">分蛋糕式传承，免繁琐手续，保单可拆分直接留给孩子或孙子。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="grid grid-cols-1 gap-6 order-2 md:order-1">
+                    <div class="flex-card p-6 rounded-2xl flex items-start gap-4">
+                        <div class="bg-yellow-400 text-red-900 w-12 h-12 rounded-full flex items-center justify-center shrink-0 font-bold text-2xl">E</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">Easy - 轻松投保</h3>
+                            <p class="text-white/80">绿色通道：无健康问题询问、无体检、无财务核查，RM100万年度保费轻松过。</p>
+                        </div>
+                    </div>
+                    <div class="flex-card p-6 rounded-2xl flex items-start gap-4">
+                        <div class="bg-yellow-400 text-red-900 w-12 h-12 rounded-full flex items-center justify-center shrink-0 font-bold text-2xl">X</div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">Xtra - 额外回报</h3>
+                            <p class="text-white/80">全球化投资视野，由专业团队管理，争取比银行存款更高的潜在回报。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white/10 p-2 rounded-3xl backdrop-blur-sm order-1 md:order-2">
                     <img src="benefits.jpg" alt="六大优势" class="rounded-2xl">
                 </div>
             </div>
@@ -67,14 +108,14 @@
 
     <section class="py-20 bg-gray-100">
         <div class="max-w-5xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-12">如何让您的财富滚动起来？</h2>
+            <h2 class="text-3xl font-bold mb-12 italic">如何让您的财富滚动起来？</h2>
             <div class="space-y-12">
                 <div class="bg-white p-6 rounded-3xl shadow-sm hover-scale">
-                    <p class="text-red-600 font-bold mb-4">—— 您的现金流计划 ——</p>
+                    <p class="text-red-600 font-bold mb-4 italic">—— 您的现金流计划 ——</p>
                     <img src="flow.jpg" alt="收益流程图" class="w-full rounded-xl">
                 </div>
                 <div class="bg-white p-6 rounded-3xl shadow-sm hover-scale">
-                    <p class="text-red-600 font-bold mb-4">—— 简单四步开启 ——</p>
+                    <p class="text-red-600 font-bold mb-4 italic">—— 简单四步开启 ——</p>
                     <img src="steps.jpg" alt="投保步骤" class="w-full rounded-xl">
                 </div>
             </div>
