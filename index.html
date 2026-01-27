@@ -3,167 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRUElite Flex - 跨世代财富增长</title>
+    <title>PRUElite Flex - 跨世代财富增长与传承方案</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .primary-gradient { background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%); }
-        .hover-scale { transition: transform 0.3s ease; }
-        .hover-scale:hover { transform: scale(1.02); }
         .flex-card { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s; }
         .flex-card:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-5px); }
         html { scroll-behavior: smooth; }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .text-4xl { font-size: 1.875rem; }
+            .text-6xl { font-size: 2.5rem; }
+            .text-3xl { font-size: 1.5rem; }
+            .text-2xl { font-size: 1.25rem; }
+            .text-xl { font-size: 1.125rem; }
+            .py-20 { padding-top: 3rem; padding-bottom: 3rem; }
+            .mb-16 { margin-bottom: 2rem; }
+            .mb-12 { margin-bottom: 1.5rem; }
+            .gap-12 { gap: 1.5rem; }
+            .gap-10 { gap: 1.25rem; }
+            .gap-8 { gap: 1rem; }
+            .px-8 { padding-left: 1rem; padding-right: 1rem; }
+            .px-6 { padding-left: 0.75rem; padding-right: 0.75rem; }
+            .p-8 { padding: 1rem; }
+            .p-6 { padding: 0.75rem; }
+            .p-4 { padding: 0.5rem; }
+            nav .text-2xl { font-size: 1.25rem; }
+            nav a { padding: 0.5rem 1rem; font-size: 0.875rem; }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
 
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm py-4">
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm py-3 md:py-4">
         <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-red-600">PRU<span class="text-gray-800">Elite Flex</span></div>
-            <a href="#contact" class="bg-red-600 text-white px-6 py-2 rounded-full font-medium hover:bg-red-700 transition">立即咨询</a>
+            <div class="text-lg md:text-2xl font-bold text-red-600">PRU<span class="text-gray-800">Elite Flex</span></div>
+            <a href="https://wa.me/60124801139" class="bg-red-600 text-white px-4 md:px-6 py-1.5 md:py-2 rounded-full text-sm md:text-base font-medium hover:bg-red-700 transition">立即咨询</a>
         </div>
     </nav>
 
-    <header class="relative h-[70vh] flex items-center justify-center overflow-hidden">
+    <header class="relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
         <img src="hero.jpg" alt="PRUElite Flex" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-black/30"></div>
         <div class="relative z-10 text-center text-white px-4">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">跨世代财富增长</h1>
-            <p class="text-xl md:text-2xl font-light mb-8 drop-shadow-md">为您和您的下一代量身定制的储蓄方案</p>
-            <a href="#intro" class="inline-block animate-bounce text-white text-3xl"><i class="fas fa-chevron-down"></i></a>
+            <h1 class="text-3xl md:text-6xl font-bold mb-3 md:mb-4 drop-shadow-lg">PRUElite Flex</h1>
+            <p class="text-lg md:text-2xl font-light mb-4 md:mb-8 drop-shadow-md px-2">跨世代财富增长与传承方案</p>
+            <div class="max-w-2xl mx-auto bg-white/10 backdrop-blur-md p-4 md:p-6 rounded-2xl border border-white/20 mt-4 md:mt-8">
+                <p class="text-sm md:text-lg">
+                    大多数投资工具让您在"保证回报"与"资本增长"之间做出选择。<br class="hidden md:block"/>
+                    <strong class="text-yellow-300">为什么不能两者兼得？</strong>
+                </p>
+            </div>
+            <a href="#intro" class="inline-block animate-bounce text-white text-2xl md:text-3xl mt-4 md:mt-8"><i class="fas fa-chevron-down"></i></a>
         </div>
     </header>
 
-    <section id="intro" class="py-20 bg-white">
+    <section id="intro" class="py-12 md:py-20 bg-white">
         <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800">为什么要在保证回报和资本增长之间做选择？</h2>
+            <div class="text-center mb-8 md:mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 px-2">为什么要在保证回报和资本增长之间做选择？</h2>
             </div>
-            <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div class="grid md:grid-cols-2 gap-6 md:gap-10 items-center">
                 <div class="hover-scale border rounded-2xl overflow-hidden shadow-xl">
                     <img src="choice.jpg" alt="投资选择" class="w-full">
                 </div>
-                <div class="space-y-6">
-                    <img src="both.jpg" alt="两者兼得" class="w-full rounded-2xl shadow-lg border-2 border-red-50">
-                    <p class="text-lg text-gray-600 leading-relaxed italic border-l-4 border-red-600 pl-4">
-                        大多数工具让你在“保本”和“增长”中二选一，但 PRUElite Flex 让你两者兼得。
+                <div class="space-y-4 md:space-y-6 text-center">
+                    <img src="both.jpg" alt="两者兼得" class="w-full rounded-2xl shadow-lg">
+                    <p class="text-base md:text-lg text-gray-600 italic border-l-4 border-red-600 pl-4 text-left">
+                        大多数工具让你在"保本"和"增长"中二选一，但 PRUElite Flex 让你两者兼得。
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 primary-gradient text-white">
+    <section class="py-12 md:py-20 primary-gradient text-white">
         <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold italic text-yellow-400 underline">FLEX 的独特魅力</h2>
-                <p class="mt-4 text-white/80 text-lg font-light">四大核心优势，为您重塑财富路径</p>
+            <div class="text-center mb-8 md:mb-16">
+                <h2 class="text-2xl md:text-4xl font-bold italic text-yellow-400 underline">FLEX 的独特魅力</h2>
             </div>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div class="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
                 <div class="hover-scale">
-                    <img src="flex.jpg" alt="FLEX 定义" class="rounded-3xl shadow-2xl">
+                    <img src="flex.jpg" alt="FLEX 定义" class="rounded-2xl md:rounded-3xl shadow-2xl w-full">
                 </div>
-                <div class="grid grid-cols-1 gap-6">
-                    <div class="flex-card p-6 rounded-2xl flex items-start gap-4">
-                        <div class="bg-yellow-400 text-red-900 w-12 h-12 rounded-full flex items-center justify-center shrink-0 font-bold text-2xl">F</div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-1">FlexIncome - 灵活收入</h3>
-                            <p class="text-white/80">就像每年领到“年度奖金”，可领出使用或存入滚利，领到100岁。</p>
-                        </div>
-                    </div>
-                    <div class="flex-card p-6 rounded-2xl flex items-start gap-4">
-                        <div class="bg-yellow-400 text-red-900 w-12 h-12 rounded-full flex items-center justify-center shrink-0 font-bold text-2xl">L</div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-1">Legacy - 财富传承</h3>
-                            <p class="text-white/80">分蛋糕式传承，免繁琐手续，保单可拆分直接留给孩子或孙子。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="grid grid-cols-1 gap-6 order-2 md:order-1">
-                    <div class="flex-card p-6 rounded-2xl flex items-start gap-4">
-                        <div class="bg-yellow-400 text-red-900 w-12 h-12 rounded-full flex items-center justify-center shrink-0 font-bold text-2xl">E</div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-1">Easy - 轻松投保</h3>
-                            <p class="text-white/80">绿色通道：无健康问题询问、无体检、无财务核查，RM100万年度保费轻松过。</p>
-                        </div>
-                    </div>
-                    <div class="flex-card p-6 rounded-2xl flex items-start gap-4">
-                        <div class="bg-yellow-400 text-red-900 w-12 h-12 rounded-full flex items-center justify-center shrink-0 font-bold text-2xl">X</div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-1">Xtra - 额外回报</h3>
-                            <p class="text-white/80">全球化投资视野，由专业团队管理，争取比银行存款更高的潜在回报。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white/10 p-2 rounded-3xl backdrop-blur-sm order-1 md:order-2">
-                    <img src="benefits.jpg" alt="六大优势" class="rounded-2xl">
+                <div class="hover-scale">
+                    <img src="benefits.jpg" alt="六大优势" class="rounded-2xl md:rounded-3xl shadow-2xl w-full">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-gray-100">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-12 italic">如何让您的财富滚动起来？</h2>
-            <div class="space-y-12">
-                <div class="bg-white p-6 rounded-3xl shadow-sm hover-scale">
-                    <p class="text-red-600 font-bold mb-4 italic">—— 您的现金流计划 ——</p>
-                    <img src="flow.jpg" alt="收益流程图" class="w-full rounded-xl">
-                </div>
-                <div class="bg-white p-6 rounded-3xl shadow-sm hover-scale">
-                    <p class="text-red-600 font-bold mb-4 italic">—— 简单四步开启 ——</p>
-                    <img src="steps.jpg" alt="投保步骤" class="w-full rounded-xl">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
+    <section class="py-12 md:py-20 bg-gray-100">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-16 text-red-800">保证回报概览</h2>
-            <div class="grid md:grid-cols-2 gap-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 italic">财富累积四步曲</h2>
+            
+            <div class="grid md:grid-cols-2 gap-4 md:gap-8">
+                <div class="bg-white p-3 md:p-4 rounded-2xl md:rounded-3xl shadow-md">
+                    <img src="WhatsApp Image 2026-01-25 at 6.36.37 PM.jpeg" alt="第一步：投入规划" class="w-full rounded-xl md:rounded-2xl">
+                    <p class="mt-3 md:mt-4 text-center text-gray-600 text-xs md:text-base">每年投入 RM24,000，只需缴付 10 年。</p>
+                </div>
+                <div class="bg-white p-3 md:p-4 rounded-2xl md:rounded-3xl shadow-md">
+                    <img src="WhatsApp Image 2026-01-25 at 6.36.48 PM.jpeg" alt="第二步：FlexIncome 选项" class="w-full rounded-xl md:rounded-2xl">
+                    <p class="mt-3 md:mt-4 text-center text-gray-600 text-xs md:text-base">每年稳定领取约 RM4,800 (20%) 或选择存起来滚利。</p>
+                </div>
+                <div class="bg-white p-3 md:p-4 rounded-2xl md:rounded-3xl shadow-md">
+                    <img src="WhatsApp Image 2026-01-25 at 6.37.12 PM.jpeg" alt="复利魔法" class="w-full rounded-xl md:rounded-2xl">
+                    <p class="mt-3 md:mt-4 text-center text-gray-600 text-xs md:text-base">5% 复利滚动，24 年后累积约 RM213,600+。</p>
+                </div>
+                <div class="bg-white p-3 md:p-4 rounded-2xl md:rounded-3xl shadow-md">
+                    <img src="WhatsApp Image 2026-01-25 at 6.37.20 PM.jpeg" alt="满期大礼包" class="w-full rounded-xl md:rounded-2xl">
+                    <p class="mt-3 md:mt-4 text-center text-gray-600 text-xs md:text-base">第 24 年一次性获得 RM240,000 (1000% 回酬比例)。</p>
+                </div>
+            </div>
+
+            <div class="mt-8 md:mt-12 bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-xl text-center">
+                <img src="WhatsApp Image 2026-01-25 at 6.37.27 PM.jpeg" alt="总计回酬" class="max-w-4xl mx-auto w-full rounded-xl md:rounded-2xl">
+                <h3 class="text-xl md:text-3xl font-bold text-red-600 mt-4 md:mt-6">合计潜在回酬 ≈ RM453,600 *</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-12 px-2">财富传承：像「分蛋糕」一样简单</h2>
+            <img src="WhatsApp Image 2026-01-25 at 6.37.42 PM.jpeg" alt="分蛋糕传承" class="max-w-4xl mx-auto w-full rounded-2xl md:rounded-3xl shadow-lg">
+            <p class="mt-6 md:mt-8 text-base md:text-xl text-gray-600 px-2">
+                钱不是以后才想怎么分，而是现在就帮家人安排好怎么拿。
+            </p>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-12 px-2">资本保证并附有定期收入来源</h2>
+            <div class="bg-white p-3 md:p-4 rounded-2xl md:rounded-3xl shadow-xl border-2 border-red-50">
+                <img src="WhatsApp Image 2026-01-25 at 6.37.35 PM.jpeg" alt="回报率表格" class="w-full rounded-xl md:rounded-2xl">
+            </div>
+            <p class="mt-4 md:mt-6 text-gray-500 italic text-xs md:text-base px-2">投保年龄越早，回酬比例越高，最高可达 455%！</p>
+        </div>
+    </section>
+
+    <section class="py-12 md:py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-16 px-2">为什么 PRUElite Flex 优于传统投资？</h2>
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8">
                 <div class="text-center">
-                    <h3 class="bg-red-100 text-red-800 py-2 rounded-t-xl font-bold">保障期限至 80 岁</h3>
-                    <div class="border-2 border-red-100 rounded-b-xl overflow-hidden shadow-lg">
-                        <img src="table1.jpg" alt="80岁收益表" class="w-full">
-                    </div>
+                    <h3 class="font-bold text-base md:text-lg mb-3 md:mb-4 text-gray-700">对比：房地产投资</h3>
+                    <img src="property.png" alt="房地产对比" class="rounded-xl md:rounded-2xl shadow-md mb-3 md:mb-4 w-full">
                 </div>
                 <div class="text-center">
-                    <h3 class="bg-blue-100 text-blue-800 py-2 rounded-t-xl font-bold">保障期限至 100 岁</h3>
-                    <div class="border-2 border-blue-100 rounded-b-xl overflow-hidden shadow-lg">
-                        <img src="table2.jpg" alt="100岁收益表" class="w-full">
-                    </div>
+                    <h3 class="font-bold text-base md:text-lg mb-3 md:mb-4 text-gray-700">对比：生前信托</h3>
+                    <img src="living_trust.png" alt="信托对比" class="rounded-xl md:rounded-2xl shadow-md mb-3 md:mb-4 w-full">
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="py-16 bg-slate-900 text-white text-center">
+    <footer id="contact" class="py-12 md:py-16 bg-slate-900 text-white text-center">
         <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-4 text-red-500 italic">PRUElite Flex</h2>
-            <p class="text-gray-400 mb-8 italic">—— 因为您，是我们的动力 ——</p>
-            <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
-                <p class="text-xl mb-4 text-yellow-500">获取属于您的专属财富增长计划</p>
-                <a href="https://wa.me/60124801139" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full text-xl font-bold transition">
-                    <i class="fab fa-whatsapp"></i> 点击 WhatsApp 咨询
+            <h2 class="text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-red-500">PRUElite Flex</h2>
+            <p class="text-gray-400 mb-6 md:mb-8 italic text-sm md:text-base">—— Our reason is you ——</p>
+            <div class="bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10">
+                <p class="text-lg md:text-xl mb-4 md:mb-6 text-yellow-500">获取属于您的专属财富增长计划</p>
+                <a href="https://wa.me/60124801139" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-full text-base md:text-xl font-bold transition">
+                    <i class="fab fa-whatsapp"></i> <span class="text-sm md:text-base">点击 WhatsApp 咨询专家</span>
                 </a>
-                <p class="mt-4 text-gray-500 text-sm">为您提供马来西亚最专业的资产规划建议</p>
             </div>
         </div>
-        <div class="mt-16 text-xs text-gray-600 text-center">
-            Confidential - For Internal training purpose only. | © 2026 PRU Life Insurance Agency
+        <div class="mt-8 md:mt-16 text-xs text-gray-600 px-4">
+            *以上内容仅为规划示意，实际回酬须以正式保单条款与保险公司表现为准。
         </div>
     </footer>
 
-    <a href="https://wa.me/60124801139" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 transition-all hover:scale-110 z-[100]">
+    <a href="https://wa.me/60124801139" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 bg-green-500 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-2xl md:text-3xl shadow-2xl hover:bg-green-600 transition-all hover:scale-110 z-[100]">
         <i class="fab fa-whatsapp"></i>
     </a>
 
 </body>
 </html>
-
-
