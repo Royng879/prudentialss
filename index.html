@@ -12,6 +12,49 @@
         .flex-card:hover { background: rgba(255, 255, 255, 0.2); transform: translateY(-5px); }
         html { scroll-behavior: smooth; }
         
+        /* Animation Styles */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse-slow {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        .flex-step {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .flex-step:nth-child(1) { animation-delay: 0.1s; }
+        .flex-step:nth-child(2) { animation-delay: 0.2s; }
+        .flex-step:nth-child(3) { animation-delay: 0.3s; }
+        .flex-step:nth-child(4) { animation-delay: 0.4s; }
+        
+        .plan-card {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .plan-card:nth-child(1) { animation-delay: 0.2s; }
+        .plan-card:nth-child(2) { animation-delay: 0.4s; }
+        
+        .animate-pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+        }
+        
         /* Mobile Responsive Styles */
         @media (max-width: 768px) {
             .text-4xl { font-size: 1.875rem; }
@@ -51,9 +94,9 @@
             <h1 class="text-3xl md:text-6xl font-bold mb-3 md:mb-4 drop-shadow-lg">PRUElite Flex</h1>
             <p class="text-lg md:text-2xl font-light mb-4 md:mb-8 drop-shadow-md px-2">跨世代财富增长与传承方案</p>
             <div class="max-w-2xl mx-auto bg-white/10 backdrop-blur-md p-4 md:p-6 rounded-2xl border border-white/20 mt-4 md:mt-8">
-                <p class="text-sm md:text-lg">
+                <p class="text-base md:text-xl">
                     大多数投资工具让您在"保证回报"与"资本增长"之间做出选择。<br class="hidden md:block"/>
-                    <strong class="text-yellow-300">为什么不能两者兼得？</strong>
+                    <strong class="text-yellow-300 text-lg md:text-2xl">为什么不能两者兼得？</strong>
                 </p>
             </div>
             <a href="#intro" class="inline-block animate-bounce text-white text-2xl md:text-3xl mt-4 md:mt-8"><i class="fas fa-chevron-down"></i></a>
@@ -63,7 +106,7 @@
     <section id="intro" class="py-12 md:py-20 bg-white">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-8 md:mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 px-2">为什么要在保证回报和资本增长之间做选择？</h2>
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-800 px-2">为什么要在保证回报和资本增长之间做选择？</h2>
             </div>
             <div class="grid md:grid-cols-2 gap-6 md:gap-10 items-center">
                 <div class="hover-scale border rounded-2xl overflow-hidden shadow-xl">
@@ -71,7 +114,7 @@
                 </div>
                 <div class="space-y-4 md:space-y-6 text-center">
                     <img src="both.jpg" alt="两者兼得" class="w-full rounded-2xl shadow-lg">
-                    <p class="text-base md:text-lg text-gray-600 italic border-l-4 border-red-600 pl-4 text-left">
+                    <p class="text-lg md:text-xl text-gray-700 italic border-l-4 border-red-600 pl-4 text-left font-medium">
                         大多数工具让你在"保本"和"增长"中二选一，但 PRUElite Flex 让你两者兼得。
                     </p>
                 </div>
@@ -79,83 +122,701 @@
         </div>
     </section>
 
-    <section class="py-12 md:py-20 primary-gradient text-white">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-8 md:mb-16">
-                <h2 class="text-2xl md:text-4xl font-bold italic text-yellow-400 underline">FLEX 的独特魅力</h2>
+    <section class="py-16 md:py-24 bg-gradient-to-br from-red-50 via-white to-yellow-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-4xl md:text-6xl font-bold text-red-700 mb-4 md:mb-6">如何让您的财富滚动起来？</h2>
+                <p class="text-xl md:text-2xl text-gray-700 font-medium">通过以下四个简单的步骤，踏上您的财富累积之路</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
-                <div class="hover-scale">
-                    <img src="flex.jpg" alt="FLEX 定义" class="rounded-2xl md:rounded-3xl shadow-2xl w-full">
-                </div>
-                <div class="hover-scale">
-                    <img src="benefits.jpg" alt="六大优势" class="rounded-2xl md:rounded-3xl shadow-2xl w-full">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-12 md:py-20 bg-gray-100">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 italic">财富累积四步曲</h2>
             
-            <div class="grid md:grid-cols-2 gap-4 md:gap-8">
-                <div class="bg-white p-3 md:p-4 rounded-2xl md:rounded-3xl shadow-md">
-                    <img src="WhatsApp Image 2026-01-25 at 6.36.37 PM.jpeg" alt="第一步：投入规划" class="w-full rounded-xl md:rounded-2xl">
-                    <p class="mt-3 md:mt-4 text-center text-gray-600 text-xs md:text-base">每年投入 RM24,000，只需缴付 10 年。</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12">
+                <!-- F - FlexIncome -->
+                <div class="flex-step bg-white rounded-3xl shadow-xl p-6 md:p-8 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                    <div class="text-center mb-6">
+                        <div class="w-24 h-24 md:w-32 md:h-32 mx-auto bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mb-4 shadow-lg animate-pulse-slow">
+                            <span class="text-4xl md:text-5xl font-black text-white">F</span>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-red-600 mb-3">FlexIncome</h3>
+                        <p class="text-lg md:text-xl font-semibold text-gray-700">灵活收入</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-50 to-red-50 rounded-2xl p-4 md:p-6">
+                        <div class="flex items-center justify-center mb-4">
+                            <i class="fas fa-coins text-4xl md:text-5xl text-yellow-500"></i>
+                        </div>
+                        <p class="text-base md:text-lg text-gray-700 leading-relaxed text-center">
+                            就像每年都能领到一份<strong class="text-red-600">"年度奖金"</strong>或<strong class="text-red-600">"零用钱"</strong>，可以领出来花，也可以存起来滚利，<strong class="text-red-600">一直领到100岁</strong>。
+                        </p>
+                    </div>
                 </div>
-                <div class="bg-white p-3 md:p-4 rounded-2xl md:rounded-3xl shadow-md">
-                    <img src="WhatsApp Image 2026-01-25 at 6.36.48 PM.jpeg" alt="第二步：FlexIncome 选项" class="w-full rounded-xl md:rounded-2xl">
-                    <p class="mt-3 md:mt-4 text-center text-gray-600 text-xs md:text-base">每年稳定领取约 RM4,800 (20%) 或选择存起来滚利。</p>
+
+                <!-- L - Legacy -->
+                <div class="flex-step bg-white rounded-3xl shadow-xl p-6 md:p-8 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                    <div class="text-center mb-6">
+                        <div class="w-24 h-24 md:w-32 md:h-32 mx-auto bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mb-4 shadow-lg animate-pulse-slow" style="animation-delay: 0.2s;">
+                            <span class="text-4xl md:text-5xl font-black text-white">L</span>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-red-600 mb-3">Legacy</h3>
+                        <p class="text-lg md:text-xl font-semibold text-gray-700">财富传承</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-50 to-red-50 rounded-2xl p-4 md:p-6">
+                        <div class="flex items-center justify-center mb-4">
+                            <i class="fas fa-users text-4xl md:text-5xl text-red-500"></i>
+                        </div>
+                        <p class="text-base md:text-lg text-gray-700 leading-relaxed text-center">
+                            就像<strong class="text-red-600">分蛋糕</strong>一样，以后可以免去繁琐的手续，把一份保单拆成几份，<strong class="text-red-600">直接分给孩子或孙子</strong>。
+                        </p>
+                    </div>
                 </div>
-                <div class="bg-white p-3 md:p-4 rounded-2xl md:rounded-3xl shadow-md">
-                    <img src="WhatsApp Image 2026-01-25 at 6.37.12 PM.jpeg" alt="复利魔法" class="w-full rounded-xl md:rounded-2xl">
-                    <p class="mt-3 md:mt-4 text-center text-gray-600 text-xs md:text-base">5% 复利滚动，24 年后累积约 RM213,600+。</p>
+
+                <!-- E - Easy -->
+                <div class="flex-step bg-white rounded-3xl shadow-xl p-6 md:p-8 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                    <div class="text-center mb-6">
+                        <div class="w-24 h-24 md:w-32 md:h-32 mx-auto bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mb-4 shadow-lg animate-pulse-slow" style="animation-delay: 0.4s;">
+                            <span class="text-4xl md:text-5xl font-black text-white">E</span>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-red-600 mb-3">Easy</h3>
+                        <p class="text-lg md:text-xl font-semibold text-gray-700">轻松投保</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-50 to-red-50 rounded-2xl p-4 md:p-6">
+                        <div class="flex items-center justify-center mb-4">
+                            <i class="fas fa-check-circle text-4xl md:text-5xl text-green-500"></i>
+                        </div>
+                        <p class="text-base md:text-lg text-gray-700 leading-relaxed text-center">
+                            走<strong class="text-green-600">"绿色通道"</strong>，不用回答健康问题，也不用体检和财务核查，<strong class="text-green-600">最高 RM100 万年度保费</strong>都能轻松过关。
+                        </p>
+                    </div>
                 </div>
-                <div class="bg-white p-3 md:p-4 rounded-2xl md:rounded-3xl shadow-md">
-                    <img src="WhatsApp Image 2026-01-25 at 6.37.20 PM.jpeg" alt="满期大礼包" class="w-full rounded-xl md:rounded-2xl">
-                    <p class="mt-3 md:mt-4 text-center text-gray-600 text-xs md:text-base">第 24 年一次性获得 RM240,000 (1000% 回酬比例)。</p>
+
+                <!-- X - Xtra -->
+                <div class="flex-step bg-white rounded-3xl shadow-xl p-6 md:p-8 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+                    <div class="text-center mb-6">
+                        <div class="w-24 h-24 md:w-32 md:h-32 mx-auto bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mb-4 shadow-lg animate-pulse-slow" style="animation-delay: 0.6s;">
+                            <span class="text-4xl md:text-5xl font-black text-white">X</span>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-red-600 mb-3">Xtra</h3>
+                        <p class="text-lg md:text-xl font-semibold text-gray-700">额外回报</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-50 to-red-50 rounded-2xl p-4 md:p-6">
+                        <div class="flex items-center justify-center mb-4">
+                            <i class="fas fa-chart-line text-4xl md:text-5xl text-blue-500"></i>
+                        </div>
+                        <p class="text-base md:text-lg text-gray-700 leading-relaxed text-center">
+                            由<strong class="text-blue-600">专业团队</strong>帮您在全球和本地投资，争取比银行利息<strong class="text-blue-600">更高的潜在回报</strong>。
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="mt-8 md:mt-12 bg-white p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-xl text-center">
-                <img src="WhatsApp Image 2026-01-25 at 6.37.27 PM.jpeg" alt="总计回酬" class="max-w-4xl mx-auto w-full rounded-xl md:rounded-2xl">
-                <h3 class="text-xl md:text-3xl font-bold text-red-600 mt-4 md:mt-6">合计潜在回酬 ≈ RM453,600 *</h3>
+            <div class="text-center">
+                <div class="inline-block bg-gradient-to-r from-red-600 to-red-700 text-white px-8 md:px-12 py-4 md:py-6 rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300">
+                    <p class="text-xl md:text-2xl font-bold">开始您的财富累积之旅</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="py-12 md:py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-12 px-2">财富传承：像「分蛋糕」一样简单</h2>
-            <img src="WhatsApp Image 2026-01-25 at 6.37.42 PM.jpeg" alt="分蛋糕传承" class="max-w-4xl mx-auto w-full rounded-2xl md:rounded-3xl shadow-lg">
-            <p class="mt-6 md:mt-8 text-base md:text-xl text-gray-600 px-2">
-                钱不是以后才想怎么分，而是现在就帮家人安排好怎么拿。
-            </p>
+    <!-- 第一步: 简单的投入规划 -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                <div class="bg-blue-600 text-white px-6 md:px-8 py-4 md:py-5 text-center">
+                    <h2 class="text-2xl md:text-4xl font-bold">规划1</h2>
+                </div>
+                <div class="bg-blue-700 text-white px-6 md:px-8 py-3 md:py-4 text-center">
+                    <h3 class="text-xl md:text-2xl font-semibold">第一步: 简单的投入规划 (The Setup)</h3>
+                </div>
+                <div class="p-6 md:p-10">
+                    <img src="WhatsApp Image 2026-01-25 at 6.36.37 PM.jpeg" alt="第一步：投入规划" class="w-full rounded-2xl mb-6 shadow-lg">
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-xl">
+                        <p class="text-xl md:text-2xl text-gray-700 font-medium mb-3">
+                            这是一个非常清晰的起点。您只需要做一个简单的决定：
+                        </p>
+                        <p class="text-2xl md:text-3xl font-bold text-red-600 mb-2">
+                            每年投入 RM24,000，连续缴付 10 年
+                        </p>
+                        <p class="text-xl md:text-2xl text-gray-700">
+                            这个动作就为您未来的财富积累奠定了坚实的基础。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第二步: 回酬一 | FlexIncome 灵活收入 (现金流) -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-green-50 to-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                <div class="bg-blue-600 text-white px-6 md:px-8 py-4 md:py-5 text-center">
+                    <h2 class="text-2xl md:text-4xl font-bold"></h2>
+                </div>
+                <div class="p-6 md:p-10">
+                    <div class="mb-6">
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2 text-center">灵活现金流 (Flexible Income)</h3>
+                        <p class="text-xl md:text-2xl text-gray-600 text-center mb-6">「每年都有钱拿」以及「钱可以怎么用」</p>
+                    </div>
+                    <img src="WhatsApp Image 2026-01-25 at 6.36.48 PM.jpeg" alt="第二步：FlexIncome 选项" class="w-full rounded-2xl mb-6 shadow-lg">
+                    <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-xl">
+                        <p class="text-xl md:text-2xl text-gray-700 font-medium mb-3">
+                            这是这个方案的第一个亮点。
+                        </p>
+                        <p class="text-2xl md:text-3xl font-bold text-green-600 mb-4">
+                            每年稳定领取 ~RM4,800 (20%)
+                        </p>
+                        <p class="text-xl md:text-2xl text-gray-700 mb-6">
+                            从第1年开始，年年有余，随心支配。您可以选择：
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-6 mt-4">
+                            <div class="bg-white p-6 rounded-xl border-2 border-green-300 shadow-md">
+                                <div class="text-center mb-4">
+                                    <i class="fas fa-hand-holding-usd text-5xl md:text-6xl text-green-500 mb-3"></i>
+                                </div>
+                                <p class="text-xl md:text-2xl font-bold text-green-600 mb-2 text-center">选项 A: 直接领取</p>
+                                <p class="text-lg md:text-xl text-gray-600 text-center">(当零用钱/补贴)</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl border-2 border-blue-300 shadow-md">
+                                <div class="text-center mb-4">
+                                    <i class="fas fa-chart-line text-5xl md:text-6xl text-blue-500 mb-3"></i>
+                                </div>
+                                <p class="text-xl md:text-2xl font-bold text-blue-600 mb-2 text-center">选项 B: 存起来滚利</p>
+                                <p class="text-lg md:text-xl text-gray-600 text-center">(享受复利增长)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第三步: 回酬二 | 满期利益 (一次性大额回酬) -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-yellow-50 to-orange-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                <div class="bg-blue-600 text-white px-6 md:px-8 py-4 md:py-5 text-center">
+                    <h2 class="text-2xl md:text-4xl font-bold"></h2>
+                </div>
+                <div class="p-6 md:p-10">
+                    <div class="mb-6">
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2 text-center">满期大礼包 (Maturity Benefit)</h3>
+                        <p class="text-xl md:text-2xl text-gray-600 text-center mb-6">未来的「大钱」和高回酬率。</p>
+                    </div>
+                    <img src="WhatsApp Image 2026-01-25 at 6.37.20 PM.jpeg" alt="满期大礼包" class="w-full rounded-2xl mb-6 shadow-lg">
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-xl">
+                        <p class="text-xl md:text-2xl text-gray-700 font-medium mb-4">
+                            时间+复利的魔力，放大您的财富
+                        </p>
+                        <div class="bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-500 rounded-2xl p-6 mb-6 text-center shadow-lg">
+                            <p class="text-lg md:text-xl text-white mb-2 font-semibold">第24年 (或80岁)</p>
+                        </div>
+                        <div class="text-center mb-6">
+                            <div class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-6 rounded-2xl text-center shadow-lg inline-block">
+                                <i class="fas fa-coins text-4xl md:text-5xl mb-3"></i>
+                                <p class="text-3xl md:text-5xl font-black mb-2">RM240,000</p>
+                                <p class="text-xl md:text-2xl font-bold">(一次性)</p>
+                            </div>
+                        </div>
+                        <div class="bg-red-600 text-white px-6 py-4 rounded-xl text-center inline-block mx-auto block w-fit">
+                            <p class="text-2xl md:text-3xl font-bold">1000% 回酬比例</p>
+                        </div>
+                        <p class="text-xl md:text-2xl text-gray-700 mt-6 text-center">
+                            除了每年累积的，您在第24年还会收到一份巨大的"满期大礼包"。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 规划2 - 第一步: 简单的投入规划 -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden mb-8">
+                <div class="bg-blue-600 text-white px-6 md:px-8 py-4 md:py-5 text-center">
+                    <h2 class="text-2xl md:text-4xl font-bold">Plan 规划2</h2>
+                </div>
+                <div class="p-6 md:p-10">
+                    <img src="WhatsApp Image 2026-01-25 at 6.36.37 PM.jpeg" alt="第一步：投入规划" class="w-full rounded-2xl mb-6 shadow-lg">
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-xl">
+                        <p class="text-xl md:text-2xl text-gray-700 font-medium mb-3">
+                            这是一个非常清晰的起点。您只需要做一个简单的决定：
+                        </p>
+                        <p class="text-2xl md:text-3xl font-bold text-red-600 mb-2">
+                            每年投入 RM24,000，连续缴付 10 年
+                        </p>
+                        <p class="text-xl md:text-2xl text-gray-700">
+                            这个动作就为您未来的财富积累奠定了坚实的基础。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 规划2 - 第二步: 回酬一 | FlexIncome 长期累积(复利魔法) -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-purple-50 to-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden mb-8">
+                <div class="bg-blue-600 text-white px-6 md:px-8 py-4 md:py-5 text-center">
+                    <h2 class="text-2xl md:text-4xl font-bold"></h2>
+                </div>
+                <div class="p-6 md:p-10">
+                    <p class="text-xl md:text-2xl text-gray-700 font-medium mb-6 text-center">
+                        小钱不花，时间让它变大钱
+                    </p>
+                    <img src="WhatsApp Image 2026-01-25 at 6.37.12 PM.jpeg" alt="第二步：复利魔法" class="w-full rounded-2xl mb-6 shadow-lg">
+                    <div class="bg-purple-50 border-l-4 border-purple-400 p-6 rounded-r-xl">
+                        <p class="text-xl md:text-2xl text-gray-700 font-medium mb-4">
+                            这是这个方案的第一个亮点。您每年获得约 RM4,800 FlexIncome，如果选择不领取，而是让它在计划中以 5% 的复利滚动增长，时间就会施展它的魔法。
+                        </p>
+                        <p class="text-2xl md:text-3xl font-bold text-purple-600 mb-4">
+                            24 年后，这笔看似不起眼的小钱将累积成一笔超过 RM213,600 的大资金！
+                        </p>
+                        <div class="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-8 py-6 rounded-2xl text-center shadow-lg">
+                            <p class="text-3xl md:text-5xl font-black">24年后累积 ≈ RM213,600+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 规划2 - 第三步: 回酬二 | 满期利益 (一次性大额回酬) -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-yellow-50 to-orange-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden mb-8">
+                <div class="bg-blue-600 text-white px-6 md:px-8 py-4 md:py-5 text-center">
+                    <h2 class="text-2xl md:text-4xl font-bold"></h2>
+                </div>
+                <div class="p-6 md:p-10">
+                    <img src="WhatsApp Image 2026-01-25 at 6.37.20 PM.jpeg" alt="满期大礼包" class="w-full rounded-2xl mb-6 shadow-lg">
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-xl">
+                        <p class="text-xl md:text-2xl text-gray-700 font-medium mb-4">
+                            除了每年累积的，您在第24年还会收到一份巨大的"满期大礼包"。
+                        </p>
+                        <div class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-6 rounded-2xl text-center shadow-lg mb-4">
+                            <p class="text-3xl md:text-5xl font-black mb-2">RM240,000</p>
+                            <p class="text-xl md:text-2xl font-bold">(一次性)</p>
+                        </div>
+                        <div class="bg-red-600 text-white px-6 py-4 rounded-xl text-center inline-block mx-auto block w-fit mb-4">
+                            <p class="text-2xl md:text-3xl font-bold">1000% 回酬比例</p>
+                        </div>
+                        <p class="text-xl md:text-2xl text-gray-700 text-center">
+                            这是一笔一次性支付的 RM240,000，相当于您年缴保费的 1000%！这是一个确定的、可观的未来财富目标。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第四步: 双重回酬合计 (The Grand Total) -->
+    <section class="py-16 md:py-24 bg-gradient-to-r from-red-600 to-red-700">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                <div class="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 md:px-8 py-4 md:py-5 text-center">
+                </div>
+                <div class="p-6 md:p-10">
+                    <img src="WhatsApp Image 2026-01-25 at 6.37.27 PM.jpeg" alt="总计回酬" class="w-full rounded-2xl mb-6 shadow-lg">
+                    <div class="bg-gradient-to-br from-yellow-50 to-orange-50 border-l-4 border-yellow-400 p-6 md:p-8 rounded-r-xl">
+                        <p class="text-xl md:text-2xl text-gray-700 font-medium mb-6">
+                            现在，让我们把这些加在一起，看看"时间+组合"的力量。
+                        </p>
+                        <div class="grid md:grid-cols-3 gap-4 md:gap-6 items-center mb-6">
+                            <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg text-center">
+                                <i class="fas fa-coins text-4xl md:text-5xl text-green-500 mb-3"></i>
+                                <p class="text-lg md:text-xl font-bold text-gray-700 mb-2">FlexIncome 累积</p>
+                                <p class="text-2xl md:text-3xl font-black text-green-600">RM213,600</p>
+                            </div>
+                            <div class="text-center">
+                                <i class="fas fa-plus text-4xl md:text-5xl text-gray-400"></i>
+                            </div>
+                            <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg text-center">
+                                <i class="fas fa-gift text-4xl md:text-5xl text-yellow-500 mb-3"></i>
+                                <p class="text-lg md:text-xl font-bold text-gray-700 mb-2">满期一次性</p>
+                                <p class="text-2xl md:text-3xl font-black text-yellow-600">RM240,000</p>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-8 py-6 rounded-2xl text-center shadow-2xl">
+                            <p class="text-2xl md:text-3xl font-bold mb-2">合计潜在回酬</p>
+                            <p class="text-4xl md:text-6xl font-black">≈ RM453,600 *</p>
+                        </div>
+                        <p class="text-xl md:text-2xl text-gray-700 mt-6 text-center font-medium">
+                            这是一个将财富最大化的强大策略。
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="py-12 md:py-20 bg-gray-50">
         <div class="max-w-6xl mx-auto px-4 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold mb-6 md:mb-12 px-2">资本保证并附有定期收入来源</h2>
+            <h2 class="text-3xl md:text-5xl font-bold mb-8 md:mb-12 px-2 text-gray-800">资本保证并附有定期收入来源</h2>
             <div class="bg-white p-3 md:p-4 rounded-2xl md:rounded-3xl shadow-xl border-2 border-red-50">
                 <img src="WhatsApp Image 2026-01-25 at 6.37.35 PM.jpeg" alt="回报率表格" class="w-full rounded-xl md:rounded-2xl">
             </div>
-            <p class="mt-4 md:mt-6 text-gray-500 italic text-xs md:text-base px-2">投保年龄越早，回酬比例越高，最高可达 455%！</p>
+            <p class="mt-6 md:mt-8 text-gray-600 italic text-lg md:text-xl px-2 font-medium">投保年龄越早，回酬比例越高，最高可达 455%！</p>
         </div>
     </section>
 
-    <section class="py-12 md:py-20 bg-white">
+    <!-- 谁最适合这个规划？ -->
+    <section class="py-16 md:py-24 bg-white">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-16 px-2">为什么 PRUElite Flex 优于传统投资？</h2>
-            <div class="grid md:grid-cols-2 gap-6 md:gap-8">
-                <div class="text-center">
-                    <h3 class="font-bold text-base md:text-lg mb-3 md:mb-4 text-gray-700">对比：房地产投资</h3>
-                    <img src="property.png" alt="房地产对比" class="rounded-xl md:rounded-2xl shadow-md mb-3 md:mb-4 w-full">
+            <div class="text-center mb-12 md:mb-16">
+                <div class="inline-flex items-center justify-center mb-4">
+                    <i class="fas fa-users text-4xl md:text-5xl text-blue-500 mr-4"></i>
+                    <h2 class="text-3xl md:text-5xl font-bold text-gray-800">谁最适合这个规划？</h2>
                 </div>
-                <div class="text-center">
-                    <h3 class="font-bold text-base md:text-lg mb-3 md:mb-4 text-gray-700">对比：生前信托</h3>
-                    <img src="living_trust.png" alt="信托对比" class="rounded-xl md:rounded-2xl shadow-md mb-3 md:mb-4 w-full">
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-6 md:p-8 shadow-lg border-l-4 border-yellow-400">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="bg-yellow-400 rounded-full w-12 h-12 flex items-center justify-center shrink-0">
+                            <i class="fas fa-user-clock text-2xl text-yellow-900"></i>
+                        </div>
+                        <p class="text-xl md:text-2xl text-gray-700 font-medium leading-relaxed">
+                            想要每年有稳定现金流(如退休金、旅游基金)的人。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 md:p-8 shadow-lg border-l-4 border-purple-400">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="bg-purple-400 rounded-full w-12 h-12 flex items-center justify-center shrink-0">
+                            <i class="fas fa-hands-clapping text-2xl text-purple-900"></i>
+                        </div>
+                        <p class="text-xl md:text-2xl text-gray-700 font-medium leading-relaxed">
+                            希望未来有一笔确定"大钱"，用于医疗或家庭长期准备的人。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-6 md:p-8 shadow-lg border-l-4 border-gray-400">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="bg-gray-400 rounded-full w-12 h-12 flex items-center justify-center shrink-0">
+                            <i class="fas fa-users text-2xl text-gray-900"></i>
+                        </div>
+                        <p class="text-xl md:text-2xl text-gray-700 font-medium leading-relaxed">
+                            注重家族传承，想把资产简单、公平地分给后代的人。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-yellow-50 to-green-50 rounded-2xl p-6 md:p-8 shadow-lg border-l-4 border-yellow-400">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="bg-yellow-400 rounded-full w-12 h-12 flex items-center justify-center shrink-0">
+                            <i class="fas fa-money-bill-wave text-2xl text-yellow-900"></i>
+                        </div>
+                        <p class="text-xl md:text-2xl text-gray-700 font-medium leading-relaxed">
+                            不想只靠银行低利息，追求更高效财富增长的人。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-red-50 border-l-4 border-red-400 p-6 md:p-8 rounded-r-xl">
+                <div class="flex items-start gap-4">
+                    <i class="fas fa-thumbtack text-2xl md:text-3xl text-red-500 shrink-0 mt-1"></i>
+                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                        温馨提示：以上内容仅为规划示意说明，实际回酬、红利及现金价值须以正式保单条款与保险公司表现为准。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 规划3 - 财富传承：像「分蛋糕」一样简单 -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-green-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16">
+                <div class="inline-flex items-center justify-center mb-4">
+                    <span class="text-green-500 text-4xl md:text-5xl mr-3">✳️</span>
+                    <h2 class="text-4xl md:text-6xl font-bold text-green-600">规划 3</h2>
+                    <span class="text-green-500 text-4xl md:text-5xl ml-3">✳️</span>
+                </div>
+                <p class="text-xl md:text-2xl text-gray-700 font-medium">「灵活性」和「家族传承」财富传承</p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden mb-8">
+                <div class="p-6 md:p-10">
+                    <h3 class="text-2xl md:text-4xl font-bold text-gray-800 mb-8 text-center">财富规划:像「分蛋糕」一样简单</h3>
+                    <img src="WhatsApp Image 2026-01-25 at 6.37.42 PM.jpeg" alt="分蛋糕传承" class="w-full rounded-2xl mb-6 shadow-lg">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-clock text-3xl md:text-4xl text-blue-500"></i>
+                                <p class="text-xl md:text-2xl text-gray-700 font-medium">提前规划好</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-file-contract text-3xl md:text-4xl text-blue-500"></i>
+                                <p class="text-xl md:text-2xl text-gray-700 font-medium">通过保单结构，免去繁琐手续</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-user-friends text-3xl md:text-4xl text-green-500"></i>
+                                <p class="text-xl md:text-2xl text-gray-700 font-medium">指定多位受益人</p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-home text-3xl md:text-4xl text-green-500"></i>
+                                <p class="text-xl md:text-2xl text-gray-700 font-medium">资金直接留给家人</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-xl">
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-hand-point-right text-3xl md:text-4xl text-red-500"></i>
+                            <p class="text-xl md:text-2xl text-gray-700 font-medium">
+                                钱不是以后才想怎么分，而是现在就帮家人安排好怎么拿。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                <div class="bg-green-600 text-white px-6 md:px-8 py-4 md:py-5">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-2">灵活收入与跨代传承 (The Concept)</h3>
+                </div>
+                <div class="p-6 md:p-10">
+                    <p class="text-xl md:text-2xl text-gray-700 leading-relaxed">
+                        「一个源头，多重去向」的基调。强调保单不是死板的，而是可以根据人生不同阶段和家族不同成员的需求进行分配，实现灵活的终身收入和跨代传承。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心理念: 灵活收入 + 跨代传承 -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 md:px-8 py-4 md:py-5 text-center">
+                    <h2 class="text-3xl md:text-5xl font-bold">核心理念: 灵活收入 + 跨代传承 (Flexibility & Legacy)</h2>
+                </div>
+                <div class="p-6 md:p-10">
+                    <div class="text-center mb-12">
+                        <div class="inline-block bg-blue-100 rounded-full p-8 md:p-12 mb-6">
+                            <i class="fas fa-shield-alt text-6xl md:text-8xl text-yellow-500"></i>
+                        </div>
+                        <h3 class="text-2xl md:text-4xl font-bold text-gray-800 mb-4">核心保单 (Source Policy)</h3>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 md:gap-8 mb-8">
+                        <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 text-center">
+                            <div class="mb-4">
+                                <i class="fas fa-arrow-up text-4xl md:text-5xl text-blue-600"></i>
+                            </div>
+                            <i class="fas fa-couch text-5xl md:text-6xl text-blue-500 mb-4"></i>
+                            <p class="text-xl md:text-2xl font-bold text-gray-800">灵活保证终身收入</p>
+                            <p class="text-lg md:text-xl text-gray-600 mt-2">(Lifelong Income)</p>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-6 text-center">
+                            <div class="mb-4">
+                                <i class="fas fa-arrow-right text-4xl md:text-5xl text-green-600"></i>
+                            </div>
+                            <div class="flex justify-center gap-4 mb-4">
+                                <i class="fas fa-home text-4xl md:text-5xl text-red-500"></i>
+                                <i class="fas fa-graduation-cap text-4xl md:text-5xl text-blue-500"></i>
+                            </div>
+                            <p class="text-xl md:text-2xl font-bold text-gray-800">按需求定制财富分配</p>
+                            <p class="text-lg md:text-xl text-gray-600 mt-2">(Customized Allocation)</p>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-yellow-50 to-orange-100 rounded-2xl p-6 text-center">
+                            <div class="mb-4">
+                                <i class="fas fa-arrow-down text-4xl md:text-5xl text-yellow-600"></i>
+                            </div>
+                            <i class="fas fa-users text-5xl md:text-6xl text-yellow-600 mb-4"></i>
+                            <p class="text-xl md:text-2xl font-bold text-gray-800">实现多代传承</p>
+                            <p class="text-lg md:text-xl text-gray-600 mt-2">(Multi-Generational Legacy)</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-r-xl">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-seedling text-3xl md:text-4xl text-green-600 shrink-0"></i>
+                            <div>
+                                <h4 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">「开枝散叶」保单裂变 (The Splitting Mechanism)</h4>
+                                <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                                    「保费繳清后，1变4，4变16」的「开枝散叶」过程视觉化，直观地展示了如何通过保单拆分实现真正的财富灵活安排。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心机制:「开枝散叶」保单裂变 -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-green-50 to-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden mb-8">
+                <div class="bg-green-700 text-white px-6 md:px-8 py-4 md:py-5 text-center">
+                    <h2 class="text-2xl md:text-4xl font-bold">核心机制:「开枝散叶」保单裂变 (Policy Splitting)</h2>
+                </div>
+                <div class="p-6 md:p-10">
+                    <div class="space-y-8">
+                        <!-- Level 1: 原始保单 -->
+                        <div class="bg-green-600 text-white p-6 md:p-8 rounded-2xl text-center">
+                            <p class="text-xl md:text-2xl font-bold mb-2">原始保单 (保费缴清后)</p>
+                            <p class="text-lg md:text-xl">(Original Policy - Paid Up)</p>
+                        </div>
+
+                        <!-- Arrow -->
+                        <div class="text-center">
+                            <i class="fas fa-arrow-down text-4xl md:text-5xl text-green-600"></i>
+                        </div>
+
+                        <!-- Level 2: 第1次拆分 -->
+                        <div class="bg-green-500 text-white p-4 md:p-6 rounded-2xl text-center mb-4">
+                            <p class="text-lg md:text-xl font-bold mb-2">第1次拆分:最多创建4份新保单</p>
+                            <p class="text-base md:text-lg">(1st Split: Up to 4 New Policies)</p>
+                        </div>
+                        <div class="grid md:grid-cols-4 gap-4 mb-4">
+                            <div class="bg-green-400 text-white p-4 rounded-xl text-center">新保单 1</div>
+                            <div class="bg-green-400 text-white p-4 rounded-xl text-center">新保单 2</div>
+                            <div class="bg-green-400 text-white p-4 rounded-xl text-center">新保单 3</div>
+                            <div class="bg-green-400 text-white p-4 rounded-xl text-center">新保单 4</div>
+                        </div>
+
+                        <!-- Arrow -->
+                        <div class="text-center">
+                            <i class="fas fa-arrow-down text-4xl md:text-5xl text-green-600"></i>
+                        </div>
+
+                        <!-- Level 3: 第2次拆分 -->
+                        <div class="bg-green-500 text-white p-4 md:p-6 rounded-2xl text-center mb-4">
+                            <p class="text-lg md:text-xl font-bold mb-2">第2次拆分:总共可达16份新保单</p>
+                            <p class="text-base md:text-lg">(2nd Split: Total up to 16 Policies)</p>
+                        </div>
+                        <div class="bg-yellow-100 p-6 rounded-2xl text-center border-2 border-yellow-400">
+                            <p class="text-xl md:text-2xl font-bold text-gray-800">实现真正的财富灵活安排</p>
+                            <p class="text-lg md:text-xl text-gray-600 mt-2">(True Flexible Wealth Arrangement)</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-xl">
+                        <h4 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">最终权益:长期布局与保障 (Final Outcomes)</h4>
+                        <p class="text-lg md:text-xl text-gray-700 mb-4">保单的两种最终权益：</p>
+                        <ul class="space-y-3 text-lg md:text-xl text-gray-700">
+                            <li class="flex items-start gap-3">
+                                <span class="text-green-600 font-bold">「生的利益」</span>
+                                <span>：即保单期满时获得的保证利益和潜在增值</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-red-600 font-bold">「死的保障」</span>
+                                <span>：即若在期满前不幸离世，将支付已缴保费总额作为死亡利益</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-6 border-2 border-yellow-300">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i class="fas fa-gift text-4xl md:text-5xl text-yellow-600"></i>
+                            <h4 class="text-xl md:text-2xl font-bold text-gray-800">保单期满利益 (Maturity Benefit)</h4>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6 mb-4">
+                            <div class="bg-white p-4 rounded-xl text-center">
+                                <i class="fas fa-coins text-4xl text-gray-500 mb-2"></i>
+                                <p class="text-lg font-bold text-gray-700">保证期满利益</p>
+                                <p class="text-base text-gray-600">(Guaranteed)</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl text-center">
+                                <i class="fas fa-coins text-4xl text-yellow-500 mb-2"></i>
+                                <p class="text-lg font-bold text-gray-700">潜在增值</p>
+                                <p class="text-base text-gray-600">(FlexIncome再投资)</p>
+                            </div>
+                        </div>
+                        <p class="text-xl md:text-2xl text-gray-700 text-center font-medium">长期财富布局的最终兑现</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 死亡利益 (Death Benefit) -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-red-50 to-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                <div class="bg-blue-600 text-white px-6 md:px-8 py-4 md:py-5">
+                    <h2 class="text-2xl md:text-4xl font-bold">① 死亡利益 (Death Benefit)</h2>
+                </div>
+                <div class="p-6 md:p-10">
+                    <div class="bg-gradient-to-br from-blue-50 to-red-50 rounded-2xl p-6 md:p-8 mb-6">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="bg-blue-500 rounded-full p-4">
+                                <i class="fas fa-heart text-3xl md:text-4xl text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-2xl md:text-3xl font-bold text-gray-800">若期满前不幸离世</p>
+                                <p class="text-lg md:text-xl text-gray-600">(If Death Occurs Before Maturity)</p>
+                            </div>
+                        </div>
+                        <div class="bg-blue-600 text-white p-6 rounded-xl">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="bg-white text-blue-600 px-4 py-2 rounded font-bold text-xl">HIGHER OF</div>
+                                <p class="text-xl md:text-2xl font-bold">支付较高者：</p>
+                            </div>
+                            <div class="bg-white text-gray-800 p-4 rounded-lg">
+                                <p class="text-xl md:text-2xl font-bold">已缴付基本保费总额</p>
+                                <p class="text-lg md:text-xl text-gray-600">(Total Basic Premiums Paid)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 对比表：房地产投资 vs PRULITE Flex -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-green-50 to-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden mb-8">
+                <div class="bg-gradient-to-r from-green-600 to-green-700 text-white px-6 md:px-8 py-4 md:py-5 text-center">
+                    <h2 class="text-2xl md:text-4xl font-bold mb-2">对比: 房地产投资</h2>
+                </div>
+                <div class="p-6 md:p-10">
+                    <div class="grid md:grid-cols-3 gap-6 mb-6">
+                        <div class="text-center">
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">房地产</h3>
+                        </div>
+                        <div class="text-center">
+                            <div class="inline-block bg-green-200 text-green-800 px-6 py-3 rounded-full font-bold text-lg">VS</div>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">PRULITE Flex</h3>
+                        </div>
+                    </div>
+                    <img src="property.png" alt="房地产对比" class="w-full rounded-2xl shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 对比表：分拆保单 vs Living Trust -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 md:px-8 py-4 md:py-5 text-center">
+                    <h2 class="text-2xl md:text-4xl font-bold mb-2">对比: 生前信托</h2>
+                </div>
+                <div class="p-6 md:p-10">
+                    <div class="grid md:grid-cols-3 gap-6 mb-6">
+                        <div class="text-center">
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">分拆保单</h3>
+                        </div>
+                        <div class="text-center">
+                            <div class="inline-block bg-blue-200 text-blue-800 px-6 py-3 rounded-full font-bold text-lg">VS</div>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-4">Living Trust</h3>
+                        </div>
+                    </div>
+                    <img src="living_trust.png" alt="信托对比" class="w-full rounded-2xl shadow-lg">
                 </div>
             </div>
         </div>
@@ -163,16 +824,16 @@
 
     <footer id="contact" class="py-12 md:py-16 bg-slate-900 text-white text-center">
         <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-red-500">PRUElite Flex</h2>
-            <p class="text-gray-400 mb-6 md:mb-8 italic text-sm md:text-base">—— Our reason is you ——</p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-red-500">PRUElite Flex</h2>
+            <p class="text-gray-400 mb-6 md:mb-8 italic text-base md:text-lg">—— Our reason is you ——</p>
             <div class="bg-white/5 p-6 md:p-8 rounded-2xl border border-white/10">
-                <p class="text-lg md:text-xl mb-4 md:mb-6 text-yellow-500">获取属于您的专属财富增长计划</p>
-                <a href="https://wa.me/60124801139" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-full text-base md:text-xl font-bold transition">
-                    <i class="fab fa-whatsapp"></i> <span class="text-sm md:text-base">点击 WhatsApp 咨询专家</span>
+                <p class="text-xl md:text-2xl mb-6 md:mb-8 text-yellow-500 font-bold">获取属于您的专属财富增长计划</p>
+                <a href="https://wa.me/60124801139" class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-8 md:px-12 py-4 md:py-5 rounded-full text-lg md:text-2xl font-bold transition transform hover:scale-105 shadow-lg">
+                    <i class="fab fa-whatsapp text-2xl md:text-3xl"></i> <span>点击 WhatsApp 咨询专家</span>
                 </a>
             </div>
         </div>
-        <div class="mt-8 md:mt-16 text-xs text-gray-600 px-4">
+        <div class="mt-8 md:mt-16 text-sm md:text-base text-gray-500 px-4">
             *以上内容仅为规划示意，实际回酬须以正式保单条款与保险公司表现为准。
         </div>
     </footer>
@@ -180,6 +841,60 @@
     <a href="https://wa.me/60124801139" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 bg-green-500 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-2xl md:text-3xl shadow-2xl hover:bg-green-600 transition-all hover:scale-110 z-[100]">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <script>
+        // 滚动动画效果
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 观察所有需要动画的元素
+        document.addEventListener('DOMContentLoaded', () => {
+            const flexSteps = document.querySelectorAll('.flex-step');
+            flexSteps.forEach(step => {
+                observer.observe(step);
+            });
+
+            const planCards = document.querySelectorAll('.plan-card');
+            planCards.forEach(card => {
+                observer.observe(card);
+            });
+
+            // 添加悬停效果
+            flexSteps.forEach(step => {
+                step.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05) translateY(-5px)';
+                });
+                step.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1) translateY(0)';
+                });
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
